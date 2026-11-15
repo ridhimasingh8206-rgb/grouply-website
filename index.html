@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grouply | Less Chasing. More Creating.</title>
+  <meta name="description" content="Grouply is an early-stage student startup concept: an academic coordination platform that helps college students assign tasks, track progress and stay accountable in group assignments.">
+  <meta name="theme-color" content="#7c5cd6">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='9' fill='%237c5cd6'/%3E%3Cpath d='M9 17l5 5 9-11' stroke='white' stroke-width='3.2' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,700;12..96,800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- ============ NAVIGATION ============ -->
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="logo" href="#home" aria-label="Grouply home">
+        <svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="currentColor"/><path d="M9 17l5 5 9-11" stroke="#fff" stroke-width="3.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        <span>Grouply</span>
+      </a>
+      <button class="nav-toggle" aria-expanded="false" aria-controls="nav-menu" aria-label="Open menu">
+        <span></span><span></span><span></span>
+      </button>
+      <div class="nav-menu" id="nav-menu">
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#how-it-works">How It Works</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+        <a class="btn btn-primary btn-sm" href="#waitlist">Join Waitlist</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="home">
+      <div class="container hero-grid">
+        <div class="hero-copy">
+          <p class="stage-chip"><span class="dot" aria-hidden="true"></span>Early-stage student startup prototype</p>
+          <h1>Group Projects Without the Group Project Stress.</h1>
+          <p class="lead">Assign tasks, track progress and stay accountable. Grouply makes college collaboration easier, clearer and more organised.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#waitlist">Join the Waitlist</a>
+            <a class="btn btn-ghost" href="#features">Explore Features</a>
+          </div>
+          <p class="tagline-line">Less Chasing. More Creating.</p>
+        </div>
+
+        <!-- Dashboard mockup (sample data, rendered by js/script.js) -->
+        <div class="hero-visual">
+          <div class="dash" role="group" aria-label="Sample Grouply dashboard showing demo data">
+            <div class="dash-head">
+              <div>
+                <p class="dash-kicker">Sample project</p>
+                <h2 class="dash-title">Marketing presentation</h2>
+              </div>
+              <span class="badge badge-demo">Sample data</span>
+            </div>
+
+            <div class="dash-progress">
+              <div class="progress-row">
+                <span class="progress-label">Group progress</span>
+                <span class="progress-value" id="progress-value">0%</span>
+              </div>
+              <div class="bar" role="progressbar" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Group progress" id="progress-bar">
+                <div class="bar-fill" id="progress-fill"></div>
+              </div>
+              <p class="progress-sub" id="progress-sub"></p>
+            </div>
+
+            <ul class="tasks" id="task-list" aria-label="Sample tasks"></ul>
+
+            <div class="members">
+              <p class="members-title">Tasks completed per member</p>
+              <ul id="member-list" class="member-list"></ul>
+            </div>
+
+            <p class="dash-note">Demo only. Select a task to change its status. Names and tasks are made up for illustration.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ PROBLEM ============ -->
+    <section class="section section-tint" id="problem">
+      <div class="container">
+        <div class="section-head">
+          <h2>We've All Been There.</h2>
+          <p>Students we spoke with described these patterns in their own group assignments.</p>
+        </div>
+        <div class="problem-grid">
+          <article class="card problem-card p1">
+            <div class="icon-wrap"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20V10M12 20V4M19 20v-7"/></svg></div>
+            <h3>Unequal Contributions</h3>
+            <p>A few people end up carrying the project while everyone shares the credit.</p>
+          </article>
+          <article class="card problem-card p2">
+            <div class="icon-wrap"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 5h16v11H9l-5 4z"/></svg></div>
+            <h3>Endless Follow-ups</h3>
+            <p>Reminders in the group chat get ignored, so someone ends up chasing everyone.</p>
+          </article>
+          <article class="card problem-card p3">
+            <div class="icon-wrap"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.5"/><path d="M12 7v5l3 2"/></svg></div>
+            <h3>Missed Deadlines</h3>
+            <p>One late part holds up the whole submission, and others scramble to cover it.</p>
+          </article>
+          <article class="card problem-card p4">
+            <div class="icon-wrap"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3l7 3v5c0 4.5-3 8-7 10-4-2-7-5.5-7-10V6z"/><path d="M9 12l2 2 4-4"/></svg></div>
+            <h3>Lack of Accountability</h3>
+            <p>When nobody clearly owns a task, nobody feels responsible for finishing it.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SOLUTION / ABOUT ============ -->
+    <section class="section" id="about">
+      <div class="container solution-grid">
+        <div class="solution-copy">
+          <h2>Meet Grouply.</h2>
+          <p class="lead-sm">Grouply is a concept for an academic coordination platform. It aims to make group assignments easier by putting responsibility, progress and deadlines in one shared place, so students spend less time chasing and more time creating.</p>
+          <ul class="pillars">
+            <li>
+              <span class="pillar-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="8" r="3.5"/><path d="M5 20c0-4 3-6 7-6s7 2 7 6"/></svg></span>
+              <div><h3>Individual task ownership</h3><p>Every task has one named owner, so it's clear who is responsible for what.</p></div>
+            </li>
+            <li>
+              <span class="pillar-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="12" rx="9" ry="6"/><circle cx="12" cy="12" r="2.5"/></svg></span>
+              <div><h3>Transparent progress tracking</h3><p>The whole group can see what's done and what's still pending, without asking.</p></div>
+            </li>
+            <li>
+              <span class="pillar-icon"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="3"/><path d="M4 10h16M9 3v4M15 3v4"/></svg></span>
+              <div><h3>Deadline management</h3><p>Personal due dates keep each part moving ahead of the final submission.</p></div>
+            </li>
+          </ul>
+        </div>
+
+        <aside class="compare" aria-label="Comparison of scattered coordination and the proposed Grouply approach">
+          <div class="compare-col compare-before">
+            <h3>Today, in many groups</h3>
+            <ul>
+              <li>Tasks agreed in a chat and easy to forget</li>
+              <li>Progress known only when you ask</li>
+              <li>Reminders sent one person at a time</li>
+              <li>Hard to see who did what</li>
+            </ul>
+          </div>
+          <div class="compare-col compare-after">
+            <h3>With Grouply <span class="badge badge-soft">Proposed</span></h3>
+            <ul>
+              <li>Each task has an owner and a due date</li>
+              <li>Progress visible to everyone</li>
+              <li>Pending work is easy to spot</li>
+              <li>A record of contributions</li>
+            </ul>
+          </div>
+        </aside>
+
+        <div class="stage-note">
+          <h3>Where we are</h3>
+          <p>Grouply began as a simple task manager. Feedback showed that splitting tasks and setting deadlines doesn't fix unequal contributions on its own, so the idea now centres on accountability. It is an early-stage student startup concept: we have spoken with students to understand the problem, and the prototype is still being developed.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ FEATURES ============ -->
+    <section class="section section-tint" id="features">
+      <div class="container">
+        <div class="section-head">
+          <h2>What Grouply aims to offer</h2>
+          <p><strong>These are proposed features.</strong> They are being designed for the prototype and are not yet available to use.</p>
+        </div>
+        <div class="feature-grid">
+          <article class="card feature span-4">
+            <div class="feature-top"><div class="icon-wrap"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="4" width="6" height="6" rx="1.5"/><path d="M14 7h6M4 15l2 2 4-4M14 17h6"/></svg></div><span class="badge badge-soft">Proposed</span></div>
+            <h3>Individual Task Allocation</h3>
+            <p>Give every member their own clearly defined part of the assignment, so nothing is left to "someone will do it".</p>
+            <div class="chips" aria-hidden="true"><span class="chip c1">Member A: Research</span><span class="chip c2">Member B: Slides</span><span class="chip c3">Member C: Design</span></div>
+          </article>
+          <article class="card feature span-2">
+            <div class="feature-top"><div class="icon-wrap"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="4" y="5" width="16" height="15" rx="3"/><path d="M4 10h16M9 3v4M15 3v4"/></svg></div><span class="badge badge-soft">Proposed</span></div>
+            <h3>Personal Deadlines</h3>
+            <p>Set a due date for each person, ahead of the final group deadline.</p>
+          </article>
+          <article class="card feature span-2">
+            <div class="feature-top"><div class="icon-wrap"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M5 20V10M12 20V4M19 20v-7"/></svg></div><span class="badge badge-soft">Proposed</span></div>
+            <h3>Progress Tracking</h3>
+            <p>See what's not started, in progress and done in one shared view.</p>
+          </article>
+          <article class="card feature span-4">
+            <div class="feature-top"><div class="icon-wrap"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 16V5M7.5 9.5L12 5l4.5 4.5M5 19h14"/></svg></div><span class="badge badge-soft">Proposed</span></div>
+            <h3>Work Uploads</h3>
+            <p>Members add their work to their own task, so submissions stay with the task instead of getting buried in a chat.</p>
+            <div class="upload-sketch" aria-hidden="true"><span>Concept sketch</span><i></i><i></i><i></i></div>
+          </article>
+          <article class="card feature span-3">
+            <div class="feature-top"><div class="icon-wrap"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h8l4 4v14H7z"/><path d="M15 3v4h4M10 12h6M10 16h6"/></svg></div><span class="badge badge-soft">Proposed</span></div>
+            <h3>Contribution Records</h3>
+            <p>A clear record of who worked on what, so effort is visible to the whole group.</p>
+          </article>
+          <article class="card feature span-3">
+            <div class="feature-top"><div class="icon-wrap"><svg viewBox="0 0 24 24" aria-hidden="true"><ellipse cx="12" cy="12" rx="9" ry="6"/><circle cx="12" cy="12" r="2.5"/></svg></div><span class="badge badge-soft">Proposed</span></div>
+            <h3>Pending Task Visibility</h3>
+            <p>Spot what is still outstanding before the deadline gets close.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ HOW IT WORKS ============ -->
+    <section class="section" id="how-it-works">
+      <div class="container">
+        <div class="section-head">
+          <h2>How It Works</h2>
+          <p><span class="badge badge-soft">Proposed workflow</span> This is how we plan for Grouply to work once the prototype is built.</p>
+        </div>
+        <ol class="steps">
+          <li class="step">
+            <span class="step-num" aria-hidden="true">1</span>
+            <h3>Create your group</h3>
+            <p>Start a project and add the people you're working with.</p>
+          </li>
+          <li class="step">
+            <span class="step-num" aria-hidden="true">2</span>
+            <h3>Assign tasks and deadlines</h3>
+            <p>Give each task an owner and a due date everyone can see.</p>
+          </li>
+          <li class="step">
+            <span class="step-num" aria-hidden="true">3</span>
+            <h3>Track progress and complete your project together</h3>
+            <p>Follow what's done, spot what's pending and finish on time.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ============ WAITLIST ============ -->
+    <section class="section section-waitlist" id="waitlist">
+      <div class="container waitlist-grid">
+        <div class="waitlist-copy">
+          <h2>Be Among the First to Try Grouply.</h2>
+          <p class="lead-sm">Interested in making group assignments less stressful? Join our early-access waitlist.</p>
+          <ul class="notes">
+            <li>Grouply is still in prototype development, so there is no product to sign in to yet.</li>
+            <li>We'll only contact you about the prototype and updates, as you agree below.</li>
+            <li>Email is optional.</li>
+          </ul>
+        </div>
+
+        <div class="form-card">
+          <div class="demo-banner" id="demo-banner" role="note">
+            <strong>Demo form.</strong> It is not connected to a database or form service yet, so nothing you enter is sent or saved. See README.md to connect it.
+          </div>
+
+          <form id="waitlist-form" novalidate>
+            <div class="field">
+              <label for="fullName">Full Name</label>
+              <input id="fullName" name="fullName" type="text" autocomplete="name" required>
+              <p class="error" id="fullName-error" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="phone">Phone Number</label>
+              <input id="phone" name="phone" type="tel" inputmode="tel" autocomplete="tel" required>
+              <p class="error" id="phone-error" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="college">College Name</label>
+              <input id="college" name="college" type="text" autocomplete="organization" required>
+              <p class="error" id="college-error" aria-live="polite"></p>
+            </div>
+            <div class="field">
+              <label for="email">Email Address <span class="optional">(optional)</span></label>
+              <input id="email" name="email" type="email" autocomplete="email">
+              <p class="error" id="email-error" aria-live="polite"></p>
+            </div>
+            <div class="field field-check">
+              <input id="consent" name="consent" type="checkbox" required>
+              <label for="consent">I agree to be contacted about Grouply's prototype and updates.</label>
+              <p class="error" id="consent-error" aria-live="polite"></p>
+            </div>
+            <button class="btn btn-primary btn-block" type="submit" id="submit-btn">Join Waitlist</button>
+            <div class="form-status" id="form-status" role="status" aria-live="polite" hidden></div>
+          </form>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="site-footer" id="contact">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <a class="logo logo-light" href="#home" aria-label="Grouply home">
+          <svg class="logo-mark" viewBox="0 0 32 32" aria-hidden="true"><rect width="32" height="32" rx="9" fill="currentColor"/><path d="M9 17l5 5 9-11" stroke="#2a1b4d" stroke-width="3.2" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          <span>Grouply</span>
+        </a>
+        <p class="footer-tagline">Less Chasing. More Creating.</p>
+      </div>
+      <nav aria-label="Footer navigation">
+        <ul class="footer-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#features">Features</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#waitlist" id="contact-link">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <div class="container footer-bottom">
+      <p>Grouply is currently in the prototype development stage.</p>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
